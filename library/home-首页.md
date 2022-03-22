@@ -1,10 +1,8 @@
 # QJ-Wiki
 
-<br>
 
-![欢迎使用amWiki！](amWiki/images/logo.png "欢迎使用amWiki！")  
 
-### 欢迎使用 amWiki 轻文库!
-—— **amWiki 致力于让大家可以更简单、更便捷的建设个人和团队文库！**  
 
-[ [amWiki 官网文档中心](https://amwiki.org/doc/) ]
+
+## Welcome to <font color=#f09938>QJ</font>\`s Plugin Wiki [ 欢迎来到<font color=#f09938>仇九</font>的插件Wiki ] !!!
+<font size=4>[ [插件工程合集(Building......)](https://github.com/QiuJiu-9/RM-World) ]</font>
