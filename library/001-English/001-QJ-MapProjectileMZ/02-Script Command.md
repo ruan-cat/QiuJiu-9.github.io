@@ -12,7 +12,7 @@ QJ.MPMZ.Shoot({
 <font size=4>
 This command will generate a default projectile.   
 You can add attributes in {} to change the setting of projectiles.  
-The default attributes and their value are bellow:
+The default attributes and their values are bellow:
 </font>
 
 ```javascript
@@ -45,4 +45,60 @@ existData:[
 ```
 
 ***
-### 2.bbb
+### 2.&emsp;&emsp;QJ.MPMZ.Laser({})
+
+```javascript
+QJ.MPMZ.Laser({
+  attributeName1:value1,
+  attributeName2:value2,
+  attributeName3:value3,
+})
+```
+
+<font size=4>
+This command will generate a default laser.   
+Laser is a ray emitted from a point(position).   
+You can add attributes in {} to change the setting of laser.  
+The default attributes and their values are bellow:
+</font>
+
+```javascript
+{
+    rotation:['M'],//The laser faces toward the mouse.
+    rotationStatic:true,//The value of rotation will be refreshed drmaticly.
+    position:[['P'],['P']],//The laser`s starting point is the same as the player`s position.
+    positionStatic:true,//The value of position will be refreshed drmaticly.
+    judgeWidth:12,//The laser`s judge width is 12px.
+    judgeMode:['T'],//-
+    existData:[{t:['Time',180],d:[1,30,2]}],//The laser exist 180 frames at most.Then laser will fade out
+                          //and be twice as big as original size for 30 frames.
+    length:['S',280],//The length of laser is 280px.
+    z:'E',//The projectile is above the map and event and below the pictures.
+    img:'WideBeam',//The default image is WideBeam.png in img/projectiles.
+    imgStretchMode:'C',//The image of laser will be scaled when the laser becomes longer.
+    imgPoint:'LaserCircle',////The default image of the corner of laser is LaserCircle.png in img/projectiles.
+    blendMode:0,//The default blendMode is 0 normal.
+    tone:[0,0,0,0],//The tone is white.
+    opacity:1,//The alpha is 1.
+    scaleX:1,//The x scale is 1.
+    moveJS:[],//There is no js script to execute when the projectile moves.
+    deadJS:null,//There is no js script to execute when the projectile disappears.
+    moveCE:[],//There is no commonevent to run when the projectile moves.
+    groupName:[],//The projectile does not belong to any group.
+    extra:null,//There is no extra data.
+}
+```
+
+------
+
+3.&emsp;&emsp;QJ.MPMZ.deleteProjectile(name)
+
+<font size=4>Delete specific projectile or laser whose attribute 'groupName'(a string array) contains the string 'name'.</font>
+
+------
+
+4.&emsp;&emsp;QJ.MPMZ.setDestinationForBid(true/false)
+
+<font size=4>Enable or Forbid the function that the player can move by click the map using mouse left button(MLB).</font>
+
+------

@@ -1,5 +1,5 @@
 # scale *
-<font size=4>This attribute determines the opacity of the projectile.    
+<font size=4>This attribute determines the scale of the projectile.    
 The base format is [scale x,scale y].   
 The default is [1,1].
 </font>
