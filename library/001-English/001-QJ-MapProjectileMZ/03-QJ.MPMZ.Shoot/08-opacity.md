@@ -10,4 +10,4 @@ The default is 1.
 opacity:0.8,   
 opacity:0.6,   
 opacity:0.4,   
-opacity:0.5,   
+opacity:'0|1~60/0.5~60/1',   

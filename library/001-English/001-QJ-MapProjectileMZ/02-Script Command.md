@@ -33,7 +33,6 @@ moveJS:[],//There is no js script to execute when the projectile moves.
 deadJS:null,//There is no js script to execute when the projectile disappears.
 moveCE:[],//There is no commonevent to run when the projectile moves.
 groupName:[],//The projectile does not belong to any group.
-reBoundTimes:0,//The projectile do not rebound.
 collisionBox:['C',8],//The collision box of the projectile is the circle with the radius is 8.
 moveType:['S',4],//The projectile move straight at the speed of 4.
 extra:null,//There is no extra data.
@@ -90,14 +89,13 @@ The default attributes and their values are bellow:
 ```
 
 ------
-
-3.&emsp;&emsp;QJ.MPMZ.deleteProjectile(name)
+### 3.&emsp;&emsp;QJ.MPMZ.deleteProjectile(name)
 
 <font size=4>Delete specific projectile or laser whose attribute 'groupName'(a string array) contains the string 'name'.</font>
 
 ------
 
-4.&emsp;&emsp;QJ.MPMZ.setDestinationForBid(true/false)
+### 4.&emsp;&emsp;QJ.MPMZ.setDestinationForBid(true/false)
 
 <font size=4>Enable or Forbid the function that the player can move by click the map using mouse left button(MLB).</font>
 
