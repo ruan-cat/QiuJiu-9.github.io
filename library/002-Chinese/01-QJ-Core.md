@@ -23,7 +23,7 @@ QJ.ss(eventId,selfSwitchName,value[,mapId]);
 判断是否按着某个按键: Input.isPressed(keyName)
 判断是否按下某个按键: Input.isTriggered(keyName)
 判断是否重复按某按键: Input.isRepeated(keyName)
-判断是否长按某个按键: Input.isLongPressed(keyName) 
+判断是否长按某个按键: Input.isLongPressed(keyName)
 
   注意:
   1.js不区分左右shift/ctrl/alt按键
