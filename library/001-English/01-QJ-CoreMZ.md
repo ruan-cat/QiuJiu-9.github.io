@@ -141,3 +141,8 @@
 
 ##  Ⅳ.SAT
    The SAT used in my other plugin.
+
+## Ⅵ.Filter
+
+   The filter effect used in my other plugin.   
+   In order to be compatible with other plugins, I choose the PIXI Filter in the version '3.1.0' which is the same as the plugin 'FilterControllerMZ.js' by Tsukimi.

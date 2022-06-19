@@ -140,3 +140,8 @@ QJ.ss(eventId,selfSwitchName,value[,mapId]);
 ##  Ⅳ.SAT算法核心
 
    我的其他插件需要的SAT算法
+
+## Ⅵ.滤镜核心
+
+   我的其他插件需要的滤镜库。   
+   为了保证不与其他插件冲突，我使用了与Tsukimi写的'FilterControllerMZ.js'一样版本的PIXI的滤镜库。

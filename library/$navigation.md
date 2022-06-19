@@ -2,7 +2,7 @@
 #### [首页](?file=首页 "返回首页")
 
 ##### English
-- [QJ-Core](?file=001-English/01-QJ-Core "QJ-Core")
+- [QJ-CoreMZ](?file=001-English/01-QJ-CoreMZ "QJ-CoreMZ")
 - **QJ-MapProjectileMZ**
     - [Base Note](?file=001-English/02-QJ-MapProjectileMZ/01-Base Note "Base Note")
     - [Script Command](?file=001-English/02-QJ-MapProjectileMZ/02-Script Command "Script Command")
@@ -28,6 +28,7 @@
         - [moveType](?file=001-English/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/18-moveType "moveType")
         - [extra](?file=001-English/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/19-extra "extra")
         - [existData](?file=001-English/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/20-existData "existData")
+        - [light](?file=001-English/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/21-light "light")
     - **QJ.MPMZ.Laser**
         - [rotation](?file=001-English/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/01-rotation "rotation")
         - [rotationStatic](?file=001-English/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/02-rotationStatic "rotationStatic")
@@ -52,7 +53,7 @@
         - [extra](?file=001-English/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/21-extra "extra")
 
 ##### Chinese
-- [QJ-Core](?file=002-Chinese/01-QJ-Core "QJ-Core")
+- [QJ-CoreMZ](?file=002-Chinese/01-QJ-CoreMZ "QJ-CoreMZ")
 - **QJ-MapProjectileMZ**
     - [基础说明](?file=002-Chinese/02-QJ-MapProjectileMZ/01-基础说明 "基础说明")
     - [插件指令](?file=002-Chinese/02-QJ-MapProjectileMZ/02-插件指令 "插件指令")
@@ -78,6 +79,7 @@
         - [moveType](?file=002-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/18-moveType "moveType")
         - [extra](?file=002-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/19-extra "extra")
         - [existData](?file=002-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/20-existData "existData")
+        - [light](?file=002-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/21-light "light")
     - **QJ.MPMZ.Laser**
         - [rotation](?file=002-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/01-rotation "rotation")
         - [rotationStatic](?file=002-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/02-rotationStatic "rotationStatic")
