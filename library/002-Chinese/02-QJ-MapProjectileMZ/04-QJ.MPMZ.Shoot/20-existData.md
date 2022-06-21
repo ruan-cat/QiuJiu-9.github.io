@@ -28,6 +28,7 @@
 |       an       |                         animation id                         |       animations        |          默认值是 0.<br /><br />0:不播放动画<br />           |                      an:0,<br />an:10,                       |
 |       p        | [pierce times,if play 'an' when pierce ,if run 'a' when pierce] |         pierce          | 默认值是 null.<br />null:该弹幕不穿透.<br />(只适用于t 为 G或者P 时)<br /><br /> pierce times：穿透次数，写-1时无限穿透<br />if play 'an' when pierce：穿透时是否播放动画<br />if run 'a' when pierce：穿透时是否执行a | p:null,<br />p:[1,true,true],<br />p:[-1,true,true],<br />p:[5,false,true],<br />p:[3,false,true], |
 |       rb       | [rebound times,if play 'an' when rebound,if run 'a' when rebound] |         rebound         | 默认值是 null.<br />(只适用于t 为 R或者T或者NP 时)<br /><br />rebound times：反弹次数，写-1时无限反弹<br />if play 'an' when rebound ：反弹时是否播放动画<br />if run 'a' when rebound ：反弹时是否执行a | rb:null,<br />rb:[1,true,true],<br />rb:[-1,true,true],<br />rb:[5,false,true],<br />rb:[3,false,true], |
+|       r        |            [rangeData1,rangeData2,rangeData3...]             |          range          | 默认值为 null.<br />这个值是为了让您设置范围攻击属性。<br />基础的格式是一个对象。<br />你需要在这个对象中设置如下属性.<br />各个属性的值与上方对应的属性名相同。<br /><br />.t:攻击的目标.只能写['P']或者['G',groupName].<br />a:行动.<br />cb:范围攻击的碰撞体积,与17-collisionBox中的相同. | r:[{t:['P'],a:['SW',1,true]},{t:['G','enemy'],a:['SW',2,true]}] |
 
 <font size=4>每一个class的默认值:   
 {c:null,a:null,d:null,an:0,p:null,rb:null},   
@@ -61,9 +62,10 @@ existData:[{t:['Time',10],d:[1,30,2]},    {t:['P'],a:['CE',1],d:[1,30,2]},    {t
         a:['CE',1],
         d:[1,30,2]
     },
-    {//弹幕可以与不可通行图块碰撞，碰撞后淡出。
+    {//弹幕可以与不可通行图块碰撞，碰撞后淡出且1执行范围攻击。
         t:['NP'],
-        d:[1,30,2]
+        d:[1,30,2],
+        r:[{t:['P'],a:['CE',1]}]
     }
 ]
 ```

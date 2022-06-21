@@ -19,7 +19,7 @@ moveCE:[[10,60,7]],
 
 |            JS Code            |                     Meaning                     |
 | :---------------------------: | :---------------------------------------------: |
-|          this.bullet          |                获得当前弹幕对象                 |
+|         this.bulletId         |               获得当前弹幕的编号                |
 |        this.sendValue         |                获得传入的特殊值                 |
 |    this.bullet.inheritX()     | 获得当前子弹的x坐标，此值可以用于生成新的弹幕。 |
 |    this.bullet.inheritY()     | 获得当前子弹的y坐标，此值可以用于生成新的弹幕。 |

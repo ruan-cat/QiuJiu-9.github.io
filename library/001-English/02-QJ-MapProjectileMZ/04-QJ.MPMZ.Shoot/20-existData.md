@@ -28,6 +28,7 @@ The 'rb' means the rebound times when the projectile collied with something. 
 |       an       |                         animation id                         |       animations        |  The default is 0.<br /><br />0:no animation to play.<br />  |                      an:0,<br />an:10,                       |
 |       p        | [pierce times,if play 'an' when pierce ,if run 'a' when pierce] |         pierce          | The default is null.<br />null:no pierce effect.<br />(only type 'G' or 'P')<br /><br />when the projectile collieds with player or events<br /> in event group, if the projectile can pierce them.<br />when the projectile pierces them, if to play 'an' and if to run 'a'.<br /><br />pierce times:-1 means the projectile can pierce forever. | p:null,<br />p:[1,true,true],<br />p:[-1,true,true],<br />p:[5,false,true],<br />p:[3,false,true], |
 |       rb       | [rebound times,if play 'an' when rebound,if run 'a' when rebound] |         rebound         | The default is null.<br />(only type ‘R' or 'T' or 'NP')<br /><br />when the projectile collieds with region or terrain or <br />no-pass tile, if the projectile can rebound instead of disappear directly.<br /><br />rebound times:-1 means the projectile can rebound forever. | rb:null,<br />rb:[1,true,true],<br />rb:[-1,true,true],<br />rb:[5,false,true],<br />rb:[3,false,true], |
+|       r        |            [rangeData1,rangeData2,rangeData3...]             |          range          | The default is null.<br />This is made to set the range atking effect.<br />The base format of rangeData is a class(object).<br />you need to set the below attribute.<br />the value of each attribute is the same as these above.<br /><br />t:the target of range atking.write ['P'] or ['G',groupName] only.<br />a:the action.<br />cb:the collisionBox of range atking.same as 17-collisionBox. | r:[{t:['P'],a:['SW',1,true]},{t:['G','enemy'],a:['SW',2,true]}] |
 
 <font size=4>Class default(no type because the type must be set so no default value):   
 {c:null,a:null,d:null,an:0,p:null,rb:null},   
@@ -62,9 +63,10 @@ existData:[{t:['Time',10],d:[1,30,2]},    {t:['P'],a:['CE',1],d:[1,30,2]},    {t
         a:['CE',1],
         d:[1,30,2]
     },
-    {//the projectile can collied with no-pass tile.when it collieds,it will fade out.
+    {//the projectile can collied with no-pass tile.when it collieds,it will fade out and deal the range atking.
         t:['NP'],
-        d:[1,30,2]
+        d:[1,30,2],
+        r:[{t:['P'],a:['CE',1]}]
     }
 ]
 ```

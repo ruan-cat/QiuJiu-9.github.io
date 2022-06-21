@@ -21,7 +21,7 @@ you can use follow scrtpt code:</font>
 
 |            JS Code            |                           Meaning                            |
 | :---------------------------: | :----------------------------------------------------------: |
-|          this.bullet          |              get the bullet(projectile) object               |
+|         this.bulletId         |                   get the id of projectile                   |
 |        this.sendValue         |                      get the sendValue                       |
 |    this.bullet.inheritX()     | get the current projectile real x.<br />you can use the value in new projectile`s position |
 |    this.bullet.inheritY()     | get the current projectile real y.<br />you can use the value in new projectile`s position |
