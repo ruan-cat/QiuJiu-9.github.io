@@ -13,8 +13,8 @@
 | ['QC',launch angle,bounce times,one bounce distance,one bounce time] |                       抛物线，多次弹跳                       | launch angle: 在属性initialRotation的基础上发射的抛射角<br />bounce times: 弹跳次数<br />one bounce distance: 一次弹跳的距离，单位为像素<br />one bounce time: 一次弹跳的时间，单位为帧 |    ['QC',60,3,24,10]     |
 |                      ['B',characterId]                       |                    固定在事件或者玩家身上                    | characterId: <br />-1 -> 玩家<br />greater than zero -> 事件id<br /> equal to zero -> 当前事件 |         ['B',-1]         |
 | ['B',characterId,down x offset,down y offset,left x offset,left y offset,<br />right x offset,right y offset,up x offset,up y offset] | 固定在事件或者玩家身上，<br />且当玩家或者事件的朝向不同时，弹幕有不同的偏移。 |              分别为朝下朝左朝右朝上的x或者y偏移              | ['B',-1,0,0,0,0,0,0,0,0] |
-|                ['C',characterId,radius,speed]                |                      让弹幕围绕玩家移动                      |  radius\*: 旋转的半径<br />speed\*: 旋转速度，单位为 度每帧  |      ['C',-1,72,30]      |
-|          ['C',characterId,radius,speed,trace speed]          |                              -                               | 当弹幕脱离轨道时弹幕会追逐角色。<br />trace speed的单位是像素每帧 |    ['C',-1,72,30,12]     |
+|                ['C',characterId,radius,speed]                |                      让弹幕围绕玩家移动                      |  radius\*: 旋转的半径<br />speed\*: 旋转速度，单位为 度每帧  |     ['C',-1,72,0.02]     |
+|          ['C',characterId,radius,speed,trace speed]          |                              -                               | 当弹幕脱离轨道时弹幕会追逐角色。<br />trace speed的单位是像素每帧 |   ['C',-1,72,0.02,12]    |
 |          ['F',x-axis expression,y-axis expression]           |                           参数方程                           | 使用以t为参数的参数方程作为弹幕的移动类型。弹幕的初始角度即为x正半轴。<br /><br /><br />['S',10] 等同于 ['F','10\*t','0'] |    ['F','10\*t','0']     |
 
 <font size=4>完整的属性范例:   </font>
@@ -29,9 +29,8 @@ moveType:['TG','helper','6|12~6/6~6|6~6/12',6,'6|2~6|4'],
 moveType:['QC',60,3,24,10],   
 moveType:['B',-1],   
 moveType:['B',-1,0,12,-12,0,12,0,0,-12],   
-moveType:['C',-1,72,30],   
-moveType:['C',-1,'0|72~60/48~60/72',30],   
-moveType:['C',-1,'0|72~60/48~60/72','10|30~10/15~10|15~10/30'],   
-moveType:['C',-1,72,30,12],   
+moveType:['C',-1,72,0.02],   
+moveType:['C',-1,'0|72~60/48~60/72',0.02],   
+moveType:['C',-1,72,0.02,12],   
 moveType:['F','10\*t','0'],   
 moveType:['F','4\*t','36\*Math.cos(t/4)'],   

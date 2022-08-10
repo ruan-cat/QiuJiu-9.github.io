@@ -100,3 +100,36 @@ The default attributes and their values are bellow:
 <font size=4>Enable or Forbid the function that the player can move by click the map using mouse left button(MLB).</font>
 
 ------
+
+**5.&emsp;&emsp;QJ.MPMZ.Shooter_ArcRange(initialRotation,{},start,end,num,disturbance,minScale,maxScale)**
+
+QJ.MPMZ.Shooter_ArcRange(initialRotation,{},start,end,num)
+
+QJ.MPMZ.Shooter_ArcRange(initialRotation,{},start,end,num,disturbance)
+
+QJ.MPMZ.Shooter_ArcRange(initialRotation,{},start,end,num,disturbance,minScale,maxScale)
+
+Fire multiple bullets in the middle of a specified angle.
+
+initialRotation:the initial rotation of projectile,the same as the attribute initialRotation of QJ.MPMZ.Shoot({}).But you can not add offset value.
+
+{}:the attributes of values.
+
+start/end:Angle. Relative to the starting and ending angle of initialrotation, the projectile curtain is launched within this angle range.
+
+num:Positive integer. The number of bullets fired.
+
+disturbance:Angle. Projectiles are fired on average within the specified angle. This value can set the disturbance angle of each bullet. The default value is 0.
+
+minScale/maxScale:Decimal, scale size. The size of the generated bullet varies randomly within a certain range. The default value is 1.
+
+e.g：
+
+```javascript
+QJ.MPMZ.Shooter_ArcRange(["P"],{
+    position:[["E",0],["E",0]]
+},-30,30,6,10,0.5,1.5);
+```
+
+------
+
