@@ -1,0 +1,12 @@
+# Terms of use / Credits:
+
+If you use any of QiuJiu\`s plugins for RPG Maker MV or RPG Maker MZ sold on itch.io, you have to follow the terms below:
+
+1. Give the credits to QiuJiu in the credits section of your game.
+2. You can use commercial plugins only when you buy them on itch.io or pay me on wechat or paypal.
+3. All free and commercial plugins can be used in free and commercial games.
+4. You are not allowed to redistribute QiuJiu\`s plugins.
+5. You can edit the code to fit your projects but you can not sell them.
+6. You can not use any codes of QiuJiu\`s plugins in your own commercial plugins.
+7. All sprites and audio which are not the RTP(RPG Maker\`s Orginal resource pack) in all plugins\` demo can not be used in your own commercial game except you get my extra permission or get the original author\`s permission or credit.
+8. All clauses work together.
