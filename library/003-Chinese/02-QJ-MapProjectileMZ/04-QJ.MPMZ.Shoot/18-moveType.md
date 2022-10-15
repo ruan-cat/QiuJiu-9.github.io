@@ -16,6 +16,7 @@
 |                ['C',characterId,radius,speed]                |                      让弹幕围绕玩家移动                      |  radius\*: 旋转的半径<br />speed\*: 旋转速度，单位为 度每帧  |     ['C',-1,72,0.02]     |
 |          ['C',characterId,radius,speed,trace speed]          |                              -                               | 当弹幕脱离轨道时弹幕会追逐角色。<br />trace speed的单位是像素每帧 |   ['C',-1,72,0.02,12]    |
 |          ['F',x-axis expression,y-axis expression]           |                           参数方程                           | 使用以t为参数的参数方程作为弹幕的移动类型。弹幕的初始角度即为x正半轴。<br /><br /><br />['S',10] 等同于 ['F','10\*t','0'] |    ['F','10\*t','0']     |
+|                     ['D',isSynRotation]                      |         弹幕会不断读取属性position的值作为实际坐标。         |            isSynRotation：是否也同步读取角度值。             |       ['D',false]        |
 
 <font size=4>完整的属性范例:   </font>
 <br/><br/>moveType:['S',10],   

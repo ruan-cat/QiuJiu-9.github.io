@@ -24,7 +24,8 @@ scaleYMin:1,          //the initial scale y is random between 1 and 2.
 scaleYMax:2,          //
 moveType:['-1*t','0'],//the particle moves straight.(Parametric equation,the param is t)
 intervalTime:2,       //the interval time of particle`s emtting is 2 frames
-bundleNumber:2        //2 particles are emitted at one time
+bundleNumber:2,       //2 particles are emitted at one time
+synScale:false        //not to syn the scale x and scale y
 }
 ```
 
@@ -47,8 +48,9 @@ The meaning of each param:</font>
 |   scaleYMin    |                the min random initial scale y                |     0.8      |
 |   scaleYMax    |                the maxrandom initial scale y                 |     1.2      |
 |    moveType    | the move type which is calculated according to the Parametric equation.<br />The coordinate system of the equation is determined by the state of the projectile.<br />The moving direction of the projectile is the positive half axis of X.<br />the format is [Equation in X direction,Equation in Y direction].<br />the default is ['-1*t','0']. |  ['2*t,'0']  |
-|  intervalTime  |           the interval time of particle`s emtting            |      2       |
+|  intervalTime  | the interval time of particle`s emtting.<br />Negative numbers can also be written here. <br />When writing negative numbers, the pop-up screen is not generated at a fixed time, but at a fixed distance.<br/>The distance is the absolute value of intervalTime, and the unit is pixel. |      2       |
 |  bundleNumber  |          how many particles are emitted at one time          |      1       |
+|    synScale    |                if syn the scale x and scale y                |    false     |
 
 
 <font size=4>Other complete examples:   </font>
