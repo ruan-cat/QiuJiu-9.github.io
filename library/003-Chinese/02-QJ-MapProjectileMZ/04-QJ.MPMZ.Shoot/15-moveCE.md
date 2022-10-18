@@ -17,11 +17,12 @@ moveCE:[[10,60,7]],
 <br/><font size=4>在这种方式执行的公共事件中，你可以使用如下代码来获得一些特殊的数据。</font>   
 <br/>
 
-|            JS Code            |                     Meaning                     |
-| :---------------------------: | :---------------------------------------------: |
-|         this.bulletId         |               获得当前弹幕的编号                |
-|        this.sendValue         |                获得传入的特殊值                 |
-|    this.bullet.inheritX()     | 获得当前子弹的x坐标，此值可以用于生成新的弹幕。 |
-|    this.bullet.inheritY()     | 获得当前子弹的y坐标，此值可以用于生成新的弹幕。 |
-| this.bullet.inheritRotation() | 获得当前子弹的角度，此值可以用于生成新的弹幕。  |
-|       this.bullet.time        |     获得当前子弹已经存在的时间，单位为帧。      |
+|            JS Code            |                           Meaning                            |
+| :---------------------------: | :----------------------------------------------------------: |
+|         this.bulletId         |          获得当前弹幕的编号(注意！这样与moveJS不同)          |
+|          this.bullet          |           获取当前子弹对象(注意！这样与moveJS不同)           |
+|        this.sendValue         | 获得传入的特殊值<br/>例如[0,10,2,5]那么this.sendValue获取的就是5<br/>再例如[10,9999,2,[5,3]]那么使用this.sendValue获取的就是[5,3] |
+|    this.bullet.inheritX()     |       获得当前子弹的x坐标，此值可以用于生成新的弹幕。        |
+|    this.bullet.inheritY()     |       获得当前子弹的y坐标，此值可以用于生成新的弹幕。        |
+| this.bullet.inheritRotation() |        获得当前子弹的角度，此值可以用于生成新的弹幕。        |
+|       this.bullet.time        |            获得当前子弹已经存在的时间，单位为帧。            |
