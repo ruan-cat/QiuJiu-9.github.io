@@ -15,6 +15,8 @@
 'an' 决定了当条件被满足时，在弹幕身上播放的动画。   
 'p' 决定了弹幕此穿透情况  
 'rb' 决定了弹幕的反弹情况   
+'r'决定了弹幕是否进行范围攻击以及范围攻击的设置  
+‘cb’决定了在进行这个判定时使用的特殊的碰撞体积，如果不设置则使用属性collisionBox的值  
 <br/>每一个t对应的各个c a d an p rb的值略有差别。</font>
 
 <br/>
@@ -29,9 +31,10 @@
 |       p        | [pierce times,if play 'an' when pierce ,if run 'a' when pierce] |         pierce          | 默认值是 null.<br />null:该弹幕不穿透.<br />(只适用于t 为 G或者P 时)<br /><br /> pierce times：穿透次数，写-1时无限穿透<br />if play 'an' when pierce：穿透时是否播放动画<br />if run 'a' when pierce：穿透时是否执行a | p:null,<br />p:[1,true,true],<br />p:[-1,true,true],<br />p:[5,false,true],<br />p:[3,false,true], |
 |       rb       | [rebound times,if play 'an' when rebound,if run 'a' when rebound] |         rebound         | 默认值是 null.<br />(只适用于t 为 R或者T或者NP 时)<br /><br />rebound times：反弹次数，写-1时无限反弹<br />if play 'an' when rebound ：反弹时是否播放动画<br />if run 'a' when rebound ：反弹时是否执行a | rb:null,<br />rb:[1,true,true],<br />rb:[-1,true,true],<br />rb:[5,false,true],<br />rb:[3,false,true], |
 |       r        |            [rangeData1,rangeData2,rangeData3...]             |          range          | 默认值为 null.<br />这个值是为了让您设置范围攻击属性。<br />基础的格式是一个对象。<br />你需要在这个对象中设置如下属性.<br />各个属性的值与上方对应的属性名相同。<br /><br />.t:攻击的目标.只能写['P']或者['G',groupName].<br />a:行动.<br />cb:范围攻击的碰撞体积,与17-collisionBox中的相同. | r:[{t:['P'],a:['SW',1,true]},{t:['G','enemy'],a:['SW',2,true]}] |
+|       cb       |                    与属性collisionBox相同                    |      collisionBox       | 默认值为null，即不进行特殊设置，使用属性collisionBox。需要注意的是这里不能使用['auto']。 |                         cb:['C',24]                          |
 
 <font size=4>每一个class的默认值:   
-{c:null,a:null,d:null,an:0,p:null,rb:null},   
+{c:null,a:null,d:null,an:0,p:null,rb:null,r:null,cb:null},   
 class举例:   
 1.弹幕移动120帧，然后在30帧内淡出   
 {t:['Time',120],d:[0,30]},   
