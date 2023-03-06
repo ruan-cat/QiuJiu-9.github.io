@@ -4,6 +4,7 @@
 ##### Terms_Of_Use
 - [English](?file=001-Terms_Of_Use/0-English "English")
 - [Chinese](?file=001-Terms_Of_Use/1-Chinese "Chinese")
+- [CustomPlugin](?file=001-Terms_Of_Use/2-CustomPlugin "CustomPlugin")
 
 ##### English
 - [QJ-CoreMZ](?file=002-English/01-QJ-CoreMZ "QJ-CoreMZ")
