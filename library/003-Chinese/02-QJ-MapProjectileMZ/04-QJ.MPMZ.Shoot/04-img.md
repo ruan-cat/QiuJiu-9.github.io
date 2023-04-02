@@ -8,6 +8,7 @@
 |                      ['C',character id]                      | character | 使用某个角色当前的行走图作为弹幕的图片.<br />-1 -> 玩家<br />0->当前事件t<br /> |                       ['C',-1]                        |
 |       ['T',text,arrangement mode,text color,text size]       |   text    |             使用文字作为弹幕图片<br />最多写一行             |         ['T','It is a text!',0,'#00ff00',18]          |
 | ['T',text,arrangement mode,text color,text size,stroke color,stroke thickness,font face] |   text    |                 和上面的一样只不过多一些属性                 | ['T','It is a text!',0,'#00ff00',18,'#ff0000',2,null] |
+|               ['A',animation id,playing times]               | animation | 将动画本身作为弹幕的图像<br />此项为MZ专属，专指播放MZ的Effect动画，不支持MV，以及MZ中的帧动画。<br />playing times：播放次数，默认为1，写-1时为不断播放。 |                        ['A',1]                        |
 
 <font size=4>文字作为图片时各个属性的含义：:</font>
 

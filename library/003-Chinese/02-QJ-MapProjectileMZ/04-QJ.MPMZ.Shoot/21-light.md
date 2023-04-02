@@ -1,6 +1,6 @@
 # light
 <font size=4>这个属性决定了弹幕绑定的灯光。   
-此功能的启用需要QJ-Lighting.js（MZ版本）的支持。   
+此功能的启用需要QJ-Lighting.js（MV版本）或者QJ-Lighting.js（MZ版本）的支持。   
 默认值为null，代表此弹幕不绑定灯光。</font>   
 
 ------
@@ -9,7 +9,7 @@
 
 ```javascript
 {
-    miniLightId:null,//写QJ-lighting.js中迷你灯光的编号。
+    miniLightId:null,//写QJ-lighting.js中迷你灯光（mini lightening）的编号。
     synRotation:false//是否同步灯光角度与弹幕的角度，角度就是朝向。
 }
 ```
