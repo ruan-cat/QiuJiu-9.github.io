@@ -108,3 +108,4 @@
         - [moveCE](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/19-moveCE "moveCE")
         - [groupName](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/20-groupName "groupName")
         - [extra](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/21-extra "extra")
+        - [rotationAdd](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/22-rotationAdd "rotationAdd")

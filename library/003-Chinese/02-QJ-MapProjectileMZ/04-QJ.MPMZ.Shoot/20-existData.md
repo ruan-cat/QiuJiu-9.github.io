@@ -87,7 +87,7 @@ existData:[{t:['Time',10],d:[1,30,2]},    {t:['P'],a:['CE',1],d:[1,30,2]},    {t
 |         this.targetId         | 子弹判定中的事件编号。<br />若判定中的是玩家，则该值为-1。<br />若判定中的是其他弹幕，则该值为那个弹幕的编号。 |
 |         this.bulletId         |                      获得当前弹幕的编号                      |
 |          this.bullet          |                       获取当前子弹对象                       |
-|        this.sendValue         | 获得传入的特殊值<br />例如a:[0,10,2,5]那么this.sendValue获取的就是5<br />再例如[10,9999,2,[5,3]]那么使用this.sendValue获取的就是[5,3] |
+|        this.sendValue         | 获得传入的特殊值<br />例如a:['C',2,5]那么执行公共事件2时this.sendValue获取的就是5<br />再例如a:['C',1,[5,3]]那么在公共事件1中使用this.sendValue获取的就是[5,3] |
 |    this.bullet.inheritX()     |       获得当前子弹的x坐标，此值可以用于生成新的弹幕。        |
 |    this.bullet.inheritY()     |       获得当前子弹的y坐标，此值可以用于生成新的弹幕。        |
 | this.bullet.inheritRotation() |        获得当前子弹的角度，此值可以用于生成新的弹幕。        |
@@ -102,7 +102,7 @@ existData:[{t:['Time',10],d:[1,30,2]},    {t:['P'],a:['CE',1],d:[1,30,2]},    {t
 |        this.eventId()         |                   执行该事件页的事件的编号                   |
 |         this.bulletId         |                      获得当前弹幕的编号                      |
 |          this.bullet          |                       获取当前子弹对象                       |
-|        this.sendValue         | 获得传入的特殊值<br />例如a:[0,10,2,5]那么this.sendValue获取的就是5<br />再例如[10,9999,2,[5,3]]那么使用this.sendValue获取的就是[5,3] |
+|        this.sendValue         | 获得传入的特殊值<br />例如a:['EP',1,5]那么在目标事件的1号事件页中this.sendValue获取的就是5<br />再例如a:['EP',2,[5,3]]那么在目标事件的2号事件页中使用this.sendValue获取的就是[5,3] |
 |    this.bullet.inheritX()     |       获得当前子弹的x坐标，此值可以用于生成新的弹幕。        |
 |    this.bullet.inheritY()     |       获得当前子弹的y坐标，此值可以用于生成新的弹幕。        |
 | this.bullet.inheritRotation() |        获得当前子弹的角度，此值可以用于生成新的弹幕。        |
