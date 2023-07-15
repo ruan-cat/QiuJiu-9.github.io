@@ -1,9 +1,6 @@
 # Base Note
 1. **The terms of use:**   
-    - This plugin is ***not*** free for commercail use.
-    - This plugin is free for non-commercail use.
-    - You need to buy this on ***itch.io*** or pay me with Paypal for commercail use.
-    - If you are Chinese, you can also use ***WeChat*** or ***Alipay***.
+    - This plugin is free for commercail and non-commercail use.
 2. **This Plugin Require:**
     - QJ-Core.js
 3. **This plugin is required by these plugins:**   
