@@ -86,6 +86,11 @@
         - [existData](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/20-existData "existData")
         - [light](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/21-light "light")
         - [hue](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/22-hue "hue")
+        - [moveF](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/23-moveF "moveF")
+        - [deadCE](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/24-deadCE "deadCE")
+        - [deadF](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/25-deadF "deadF")
+        - [onScreen](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/26-onScreen "onScreen")
+        - [judgeAccuracy](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/27-judgeAccuracy "judgeAccuracy")
     - **QJ.MPMZ.Laser**
         - [rotation](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/01-rotation "rotation")
         - [rotationStatic](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/02-rotationStatic "rotationStatic")
