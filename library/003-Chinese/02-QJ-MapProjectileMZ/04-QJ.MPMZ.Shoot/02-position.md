@@ -1,7 +1,7 @@
 # position
 <font size=4>这个属性决定了弹幕的初始位置单位是像素。   
 基础的格式是： [x,y].   
-其中的x和y可分别写:</font>
+其中的x和y可分别写：（offset x/y的意思的偏移值，每个值最后一项均可写偏移值）</font>
 
 |                           Command                           |     Meaning      |                     Note                      | Example  |
 | :---------------------------------------------------------: | :--------------: | :-------------------------------------------: | :------: |
@@ -10,10 +10,12 @@
 |         ['E',event id] or ['E',event id,offset x/y]         |      event       |     获取某事件的屏幕坐标作为子弹的屏幕x/y     | ['E',10] |
 | ['B',projectile index] or ['B',projectile index,offset x/y] | projectile index | 获取其他子弹的屏幕坐标作为当前子弹的屏幕x/y。 | ['B',1]  |
 |           ['S',script] or ['S',script,offset x/y]           |      script      |          用脚本的值作为弹幕的坐标。           |['S','$gamePlayer.screenX()+10']|
+| ['Map',x/y] or ['Map',x/y,offset x/y] | map position | 在某个地图左边的中心显示弹幕。 |['Map',13]|
 
 <font size=4>完整的属性范例:   </font>
 
 position:[['P'],['P']],   
 position:[['E',10,5],['E',10,0]],   
 position:[['M'],['M']],   
-position:[['S','$gamePlayer.screenX()'],['S','$gamePlayer.screenY()']],
+position:[['S','$gamePlayer.screenX()'],['S','$gamePlayer.screenY()']],   
+position:[['Map',13],['Map',10]],//在地图的x=13，y=10处显示弹幕。

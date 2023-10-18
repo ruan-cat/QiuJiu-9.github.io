@@ -61,7 +61,7 @@
 - [QJ-CoreMZ](?file=003-Chinese/01-QJ-CoreMZ "QJ-CoreMZ")
 - **QJ-MapProjectileMZ**
     - [基础说明](?file=003-Chinese/02-QJ-MapProjectileMZ/01-基础说明 "基础说明")
-    - [插件指令](?file=003-Chinese/02-QJ-MapProjectileMZ/02-插件指令 "插件指令")
+    - [脚本指令](?file=003-Chinese/02-QJ-MapProjectileMZ/02-脚本指令 "脚本指令")
     - [事件注释](?file=003-Chinese/02-QJ-MapProjectileMZ/03-事件注释 "事件注释")
     - **QJ.MPMZ.Shoot**
         - [initialRotation](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/01-initialRotation "initialRotation")
@@ -90,7 +90,12 @@
         - [deadCE](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/24-deadCE "deadCE")
         - [deadF](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/25-deadF "deadF")
         - [onScreen](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/26-onScreen "onScreen")
-        - [judgeAccuracy](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/27-judgeAccuracy "judgeAccuracy")
+        - [judgeAccuracyMove](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/27-judgeAccuracyMove "judgeAccuracyMove")
+        - [judgeAccuracyRotation](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/28-judgeAccuracyRotation "judgeAccuracyRotation")
+        - [judgeAccuracyScale](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/29-judgeAccuracyScale "judgeAccuracyScale")
+        - [judgeAccuracyAnchor](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/30-judgeAccuracyAnchor "judgeAccuracyAnchor")
+        - [trailEffect](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/31-trailEffect "trailEffect")
+        - [timeline](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/32-timeline "timeline")
     - **QJ.MPMZ.Laser**
         - [rotation](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/01-rotation "rotation")
         - [rotationStatic](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/02-rotationStatic "rotationStatic")
@@ -114,3 +119,6 @@
         - [groupName](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/20-groupName "groupName")
         - [extra](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/21-extra "extra")
         - [rotationAdd](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/22-rotationAdd "rotationAdd")
+        - [positionSpread](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/23-positionSpread "positionSpread")
+    - [JS接口说明](?file=003-Chinese/02-QJ-MapProjectileMZ/06-JS接口说明 "JS接口说明")
+    - [QJ.MPMZ.RC](?file=003-Chinese/02-QJ-MapProjectileMZ/07-QJ.MPMZ.RC "QJ.MPMZ.RC")
