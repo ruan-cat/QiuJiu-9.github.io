@@ -24,6 +24,7 @@ scaleYMax:2,          //
 moveType:['-1*t','0'],//粒子的移动方式为直线且速度为1，这是一个t为参数的参数方程。
 intervalTime:2,       //粒子的发射间隔时间为2帧。
 bundleNumber:2,       //一次性发射2个粒子。
+blendMode:0,          //混合模式是“正常”
 synScale:false        //x缩放率和y缩放率不同步，各缩放各的
 }
 ```
@@ -48,6 +49,7 @@ synScale:false        //x缩放率和y缩放率不同步，各缩放各的
 |    moveType    | 粒子的移动类型是基础一个以t为参数的参数方程。<br />粒子的坐标系的角度为粒子发射时刻弹幕的移动角度。<br />弹幕的移动角度就是粒子移动坐标系的x正半轴。.<br />基础格式为 [x方向的参数方程,y方向的参数方程].<br />默认值为 ['-1*t','0']. | ['2*t','0']  |
 |  intervalTime  | 发射粒子的间隔时间。<br />这里也可以写负数，写负数时弹幕不是定时生成，而是定距离生成，<br />距离为intervalTime的绝对值，单位为像素。 |      2       |
 |  bundleNumber  |                 发射粒子时一次性发射多少粒子                 |      1       |
+|   blendMode    |                混合模式。<br />写0或1或2或3。                |      0       |
 |    synScale    | 是否同步scaleX和scaleY,同步后scaleY的值和scaleX的值相同。写布尔值。 |    false     |
 | sheetSpriteSet |      分层精灵表模式。默认值是-1。具体的解释在此页下面。      |      -1      |
 
