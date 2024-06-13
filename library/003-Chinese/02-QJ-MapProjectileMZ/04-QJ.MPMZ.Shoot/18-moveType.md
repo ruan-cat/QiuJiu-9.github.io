@@ -18,6 +18,7 @@
 |          ['F',x-axis expression,y-axis expression]           |                           参数方程                           | 使用以t为参数的参数方程作为弹幕的移动类型。弹幕的初始角度即为x正半轴。<br /><br /><br />['S',10] 等同于 ['F','10\*t','0'] |           ['F','10\*t','0']           |
 |                     ['D',isSynRotation]                      |         弹幕会不断读取属性position的值作为实际坐标。         |            isSynRotation：是否也同步读取角度值。             |              ['D',false]              |
 |        ['BL',speed,stepMin,stepMax,widthMin,widthMax]        | BL就是broken line，折线。<br />让弹幕沿着随机的折线移动。<br /> | 折线每沿移动方向行走一步（stepMin到stepMax之间，单位是像素），就随机向两方转折一下，转折点距移动方向的距离介于widthMin和widthMax之间，单位是像素。沿着这条折线的一度速度是speed，单位是像素每帧。 |         ['BL',4,12,36,24,48]          |
+|           ['BB',projectile index,r,sync rotation]            |              使该弹幕绑定在对应弹幕的相对位置。              | 弹幕会每帧读取projectile index号弹幕的位置和自己的position属性，并将他们加起来作为弹幕实际的位置。<br />效果就是此弹幕会显示在projectile index号弹幕的相对位置。<br />projectile index：另一个弹幕的编号。<br />r：写true或false，默认为true，相对位置是否考虑projectile index号弹幕的角度。<br />sync rotation：写true或false，默认为true，写true时，弹幕会每帧读取projectile index号弹幕的角度和自己的initialRotation属性，并将他们加起来作为弹幕实际的角度。 |               ['BB',1]                |
 
 <font size=4>完整的属性范例:   </font>
 <br/><br/>moveType:['S',10],   
