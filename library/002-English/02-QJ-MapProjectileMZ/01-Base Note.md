@@ -1,10 +1,8 @@
 # Base Note
 1. **The terms of use:**   
     - This plugin is free for commercail and non-commercail use.
-2. **This Plugin Require:**
+2. **The Plugin Require:**
     - QJ-Core.js
-3. **This plugin is required by these plugins:**   
-    - QJ-MapBarrage.js
 4. **How can you use this plugin:**
     - This plugin usually works with the plugins above.
     - You need Javascript knowledge to use this as a stand-alone plugin.
@@ -24,7 +22,11 @@
         &emsp;The initial value is 5, then it becomes 20 after 10 frames for 30 frames, then it gradually becomes 30 in 30 frames(because of using /).
     - The first change point is the initial value.   
     - The fade target value may also be color as #00FF00.   
-    &emsp;e.g:&emsp;'0|#ff0000\~30/#00ff00\~20|#0000ff'   
-    &emsp;The initial color is red #ff0000. Then it gradually becomes green #ff0000 in 30 frames.Then it suddenly becomes blue #0000ff for 20 frames.Then it suddenly becomes red #ff0000.Then it cycles.
+      &emsp;e.g:&emsp;'0|#ff0000\~30/#00ff00\~20|#0000ff'   
+      &emsp;The initial color is red #ff0000. Then it gradually becomes green #ff0000 in 30 frames.Then it suddenly becomes blue #0000ff for 20 frames.Then it suddenly becomes red #ff0000.Then it cycles.
     - You should use angle.The plugin can convert it to radians automatically.
-    .
+
+6.**It is very, very important to pay attention**
+The projectile system is relatively complex, and most importantly, it is relatively free to use, with some special effects that cannot be saved in principle.
+Therefore, when using this plugin to save or enter a saved map, there must be no bullet comments in the map.   
+Otherwise, the file cannot be read normally.

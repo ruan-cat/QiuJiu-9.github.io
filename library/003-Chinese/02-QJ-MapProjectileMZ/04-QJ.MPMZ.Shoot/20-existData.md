@@ -115,7 +115,7 @@ existData:[{t:['Time',10],d:[1,30,2]},    {t:['P'],a:['CE',1],d:[1,30,2]},    {t
 |        JS Code         |                        Meaning                        |
 | :--------------------: | :---------------------------------------------------: |
 |         target         | 判定到的目标对象，可能是事件或者玩家（$gamePlayer）。 |
-|      bulletTarget      |      判定到的是其他弹幕时，这个值1是其他子弹对象      |
+|      bulletTarget      |      判定到的是其他弹幕时，这个值是其他子弹对象       |
 |       this.index       |                  获得当前弹幕的编号                   |
 |          this          |                   获取当前子弹对象                    |
 |       actionData       |           获取['S',script text]这个初始数据           |
@@ -136,7 +136,7 @@ existData:[{t:['Time',10],d:[1,30,2]},    {t:['P'],a:['CE',1],d:[1,30,2]},    {t
 //例如在某个弹幕中写
 //['F',testFunc,[1,"typeA"]]
 //那么函数testFunc可以这样写：
-testFunc = function(atkValue,atkType,args) {
+var testFunc = function(atkValue,atkType,args) {
     
 }
 //其中atkValue就会是1

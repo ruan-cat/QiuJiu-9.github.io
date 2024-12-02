@@ -15,6 +15,8 @@ The 'd' means which special gradient effect on projectile\`s image needed to be 
 The 'an' means which animation in current MZ project\`s database will be played on projectile when the projectile disappears.   
 The 'p' means the setting about pierce when the projectile collieds with something then disappears.   
 The 'rb' means the rebound times when the projectile collied with something.   
+The  'r' decided whether the projectile was subjected to a range attack and the setting of the range attack  
+The ‘cb’ decided the special collision volume to be used for this determination, and if not set, use the value of the collisionBox attribute    
 <br/>The attributes of different types of classes are slightly different.</font>
 
 <br/>
@@ -29,6 +31,7 @@ The 'rb' means the rebound times when the projectile collied with something. 
 |       p        | [pierce times,if play 'an' when pierce ,if run 'a' when pierce] |         pierce          | The default is null.<br />null:no pierce effect.<br />(only type 'G' or 'P')<br /><br />when the projectile collieds with player or events<br /> in event group, if the projectile can pierce them.<br />when the projectile pierces them, if to play 'an' and if to run 'a'.<br /><br />pierce times:-1 means the projectile can pierce forever. | p:null,<br />p:[1,true,true],<br />p:[-1,true,true],<br />p:[5,false,true],<br />p:[3,false,true], |
 |       rb       | [rebound times,if play 'an' when rebound,if run 'a' when rebound] |         rebound         | The default is null.<br />(only type ‘R' or 'T' or 'NP')<br /><br />when the projectile collieds with region or terrain or <br />no-pass tile, if the projectile can rebound instead of disappear directly.<br /><br />rebound times:-1 means the projectile can rebound forever. | rb:null,<br />rb:[1,true,true],<br />rb:[-1,true,true],<br />rb:[5,false,true],<br />rb:[3,false,true], |
 |       r        |            [rangeData1,rangeData2,rangeData3...]             |          range          | The default is null.<br />This is made to set the range atking effect.<br />The base format of rangeData is a class(object).<br />you need to set the below attribute.<br />the value of each attribute is the same as these above.<br /><br />t:the target of range atking.write ['P'] or ['G',groupName] only.<br />a:the action.<br />cb:the collisionBox of range atking.same as 17-collisionBox. | r:[{t:['P'],a:['SW',1,true]},{t:['G','enemy'],a:['SW',2,true]}] |
+|       cb       |                         collisionBox                         |      collisionBox       | The default value is null, which means no special settings are made and the property collisionBox is used. It should be noted that ['auto'] cannot be used here. |                         cb:['C',24]                          |
 
 <font size=4>Class default(no type because the type must be set so no default value):   
 {c:null,a:null,d:null,an:0,p:null,rb:null},   
@@ -69,5 +72,96 @@ existData:[{t:['Time',10],d:[1,30,2]},    {t:['P'],a:['CE',1],d:[1,30,2]},    {t
         r:[{t:['P'],a:['CE',1]}]
     }
 ]
+```
+
+
+
+
+
+
+
+In a (action), some escape characters that can be used in certain settings, as well as special features, are as follows:<br />
+
+['C',CommonEvent Id,send value]
+
+|            JS Code            |                           Meaning                            |
+| :---------------------------: | :----------------------------------------------------------: |
+|        this.eventId()         | The event number in bullet determination.<br />If the person being judged is a player, then the value is -1.<br />If the judgment is for another projectile, then the value is 0. |
+|         this.targetId         | The event number in bullet determination.<br />If the person being judged is a player, then the value is -1.<br />If the judgment is for another projectile, then this value is the number of that projectile. |
+|         this.bulletId         |                        projectile id                         |
+|          this.bullet          |                      projectile object                       |
+|        this.sendValue         | Get the special value passed in.<br/>For example, if a: ['C',2,5], then when executing public event 2, this. sendValue will get 5.<br/>Also, if a: ['C', 1, [5,3]], then using this. sendValue in public event 1 will get [5,3] |
+|    this.bullet.inheritX()     | Obtain the x-coordinate of the current bullet, which can be used to generate a new projectile. |
+|    this.bullet.inheritY()     | Obtain the y-coordinate of the current bullet, which can be used to generate a new projectile. |
+| this.bullet.inheritRotation() | Obtain the rotation of the current bullet, which can be used to generate a new projectile. |
+|       this.bullet.time        | Obtain the time, in frames, that the current bullet has existed. |
+|         this.ifPierce         | Did the projectile penetrate during the execution of this public event |
+|        this.ifRebound         | Does the projectile bounce back during the execution of this public event |
+
+<br /> ['EP',Page Id,send value]
+
+|            JS Code            |                           Meaning                            |
+| :---------------------------: | :----------------------------------------------------------: |
+|        this.eventId()         |          Execute the event number of the event page          |
+|         this.bulletId         |                        projectile id                         |
+|          this.bullet          |                      projectile object                       |
+|        this.sendValue         | Get the special value passed in.<br/>For example, if a: ['C',2,5], then when executing public event 2, this. sendValue will get 5.<br/>Also, if a: ['C', 1, [5,3]], then using this. sendValue in public event 1 will get [5,3] |
+|    this.bullet.inheritX()     | Obtain the x-coordinate of the current bullet, which can be used to generate a new projectile. |
+|    this.bullet.inheritY()     | Obtain the y-coordinate of the current bullet, which can be used to generate a new projectile. |
+| this.bullet.inheritRotation() | Obtain the rotation of the current bullet, which can be used to generate a new projectile. |
+|       this.bullet.time        | Obtain the time, in frames, that the current bullet has existed. |
+|         this.ifPierce         | Did the projectile penetrate during the execution of this public event |
+|        this.ifRebound         | Does the projectile bounce back during the execution of this public event |
+
+<br />['S',script text]<br />
+
+|            JS Code            |                           Meaning                            |
+| :---------------------------: | :----------------------------------------------------------: |
+|            target             | The identified target object may be an event or a player.($gamePlayer) |
+|         bulletTarget          | When other bullet comments are detected, this value is for other bullet objects |
+|          this.index           |                        projectile id                         |
+|             this              |                      projectile object                       |
+|          actionData           |                    Get ['S', script text]                    |
+|    this.bullet.inheritX()     | Obtain the x-coordinate of the current bullet, which can be used to generate a new projectile. |
+|    this.bullet.inheritY()     | Obtain the y-coordinate of the current bullet, which can be used to generate a new projectile. |
+| this.bullet.inheritRotation() | Obtain the rotation of the current bullet, which can be used to generate a new projectile. |
+|           this.time           | Obtain the time, in frames, that the current bullet has existed. |
+|         this.ifPierce         | Did the projectile penetrate during the execution of this public event |
+|        this.ifRebound         | Does the projectile bounce back during the execution of this public event |
+
+<br />['F',function,functionArgumentsArray]<br />
+
+<font size=4>be careful! After using this function, the projectile cannot be saved. Please clear the projectile before saving.    
+In the executed function, the first few parameters of the function are the values set in functionArgumentsArray.    
+After the last parameter, a special parameter will be passed in, which records the detailed data of the collision. You can use this data to do some advanced effects.</font>
+
+```javascript
+//For example, writing in a certain projectile:
+//['F',testFunc,[1,"typeA"]]
+//So the function testFunc can be written as follows:
+var testFunc = function(atkValue,atkType,args) {
+    
+}
+//atkValue is 1
+//atkType is "typeA"
+//args is object
+//when args is ['F',testFunc,[1,"typeA"]]:
+{
+    actionData:['F',testFunc,[1,"typeA"]],//actionData is value of action
+    target:null,//if t of existData is'P', then targe is $gamePalyer；if t of existData is'G', then targe is event；
+    bulletTarget:null,//If the t of this existData is 'B ', then bulletTarget is the projectile object that collides.
+        //You can use args. bulletTarget.setDead() in the testFunc function above; Make it disappear or perform other treatments.
+    ifPierce:false,//This value is false or true, representing whether the collision was a penetration. Penetration means that the existData can be further penetrated instead of disappearing directly.
+    ifRebound:false//This value is false or true, representing whether the collision occurred as a rebound. Penetration means that the existData can undergo more rebounds instead of disappearing directly.
+}
+//More detailed examples:
+existData:[{t:['B','testBullet',a:['F',testFunc]]}]
+//The corresponding function testFunc: (the one above) ['F', testFunc] has no parameters set, so the following function testFunc only has one default args.
+testFunc = function(args) {
+    if (args.bulletTarget) {//Collide with projectile, and the projectile that collides exists
+        args.bulletTarget.setDead({t:['Time',0],d:[0,30]});//Make the projectile disappear and fade out within 30 frames.
+        //[06-JS API]
+    }
+}
 ```
 

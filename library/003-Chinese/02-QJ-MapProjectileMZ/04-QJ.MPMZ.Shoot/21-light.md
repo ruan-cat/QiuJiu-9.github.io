@@ -10,6 +10,7 @@
 ```javascript
 {
     miniLightId:null,//写QJ-lighting.js中迷你灯光（mini lightening）的编号。
+    lightId:null,//写QJ-lighting.js中灯光的编号。
     synRotation:false//是否同步灯光角度与弹幕的角度，角度就是朝向。
 }
 ```

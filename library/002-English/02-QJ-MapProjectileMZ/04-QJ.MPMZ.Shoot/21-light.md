@@ -10,6 +10,7 @@ you need to set the attribute in the format below:
 ```javascript
 {
     miniLightId:null,//the mini lighting id in plugin QJ-Lighting
+    lightId:null,//the lighting id in plugin QJ-Lighting
     synRotation:false//if to synchronize the rotation of projectile and lighting.
 }
 ```

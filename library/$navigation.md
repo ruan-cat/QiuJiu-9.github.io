@@ -96,6 +96,7 @@
         - [judgeAccuracyAnchor](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/30-judgeAccuracyAnchor "judgeAccuracyAnchor")
         - [trailEffect](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/31-trailEffect "trailEffect")
         - [timeline](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/32-timeline "timeline")
+        - [initialRotationSub](?file=003-Chinese/02-QJ-MapProjectileMZ/04-QJ.MPMZ.Shoot/33-initialRotationSub "initialRotationSub")
     - **QJ.MPMZ.Laser**
         - [rotation](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/01-rotation "rotation")
         - [rotationStatic](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/02-rotationStatic "rotationStatic")
@@ -120,5 +121,6 @@
         - [extra](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/21-extra "extra")
         - [rotationAdd](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/22-rotationAdd "rotationAdd")
         - [positionSpread](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/23-positionSpread "positionSpread")
+        - [rotationSub](?file=003-Chinese/02-QJ-MapProjectileMZ/05-QJ.MPMZ.Laser/24-rotationSub "rotationSub")
     - [JS接口说明](?file=003-Chinese/02-QJ-MapProjectileMZ/06-JS接口说明 "JS接口说明")
     - [QJ.MPMZ.RC](?file=003-Chinese/02-QJ-MapProjectileMZ/07-QJ.MPMZ.RC "QJ.MPMZ.RC")
